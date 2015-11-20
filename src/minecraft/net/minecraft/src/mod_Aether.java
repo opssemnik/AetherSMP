@@ -42,7 +42,9 @@ public class mod_Aether extends BaseModMp
         ModLoader.RegisterKey(this, key_loreGain, false);
         ModLoader.AddLocalization("key.loreGain", "Gain Lore");
         ModLoader.SetInGameHook(this, true, false);
-    //    SAPI.interceptAdd(this);
+        for(int i = 108; i <= (i+MAX_GUI);i++){
+        	ModLoaderMp.RegisterGUI(this, i);
+        }
        
     }
 
@@ -1010,6 +1012,9 @@ public class mod_Aether extends BaseModMp
     public static boolean hasLoreAether = false;
     public static IAetherBoss currentBoss = null;
     private KeyBinding key_loreGain;
+    /** fix gui SMP **/
+    public static int MAX_GUI = 7;
+    
 	 public static PlayerBaseAether getPlayer()
     {
         return getPlayer(((EntityPlayer) (ModLoader.getMinecraftInstance().thePlayer)));
