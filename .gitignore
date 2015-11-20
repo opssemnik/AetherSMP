@@ -1,6 +1,18 @@
-*
-*/
-!src/
+*.bat
+*.sh
+bin
+jars
+saves
+world
+logs
+lib
+reobf
+eclipse
+runtime
+docs
+conf
+temp
+
 
 
 
