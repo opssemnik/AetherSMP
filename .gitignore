@@ -1,6 +1,6 @@
 *
 */
-!/src/minecraft_server/net/minecraft/server/*
-!/src/minecraft_server/net/minecraft/src/*
+!src/minecraft_server/net/minecraft/server/*
+!src/minecraft_server/net/minecraft/src/*
 
 
