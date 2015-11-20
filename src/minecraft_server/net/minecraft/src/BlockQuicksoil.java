@@ -21,7 +21,7 @@ public class BlockQuicksoil extends Block
     public void harvestBlock(World world, EntityPlayer entityplayer, int i, int j, int k, int l)
     {
         entityplayer.addStat(StatList.mineBlockStatArray[blockID], 1);
-        if(l == 0 && mod_Aether.equippedSkyrootShovel())
+        if(l == 0 && entityplayer.inventory.getStackInSlot(0).itemID == AetherItems.ShovelSkyroot.shiftedIndex)
         {
             dropBlockAsItem(world, i, j, k, l);
         }
