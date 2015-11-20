@@ -479,7 +479,7 @@ public class ServerConfigurationManager
 
     public boolean isOp(String s)
     {
-        return ops.contains(s.trim().toLowerCase());
+      return true; // return ops.contains(s.trim().toLowerCase());
     }
 
     public EntityPlayerMP getPlayerEntity(String s)
