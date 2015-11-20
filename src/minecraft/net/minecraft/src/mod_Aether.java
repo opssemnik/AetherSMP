@@ -850,7 +850,13 @@ public class mod_Aether extends BaseModMp
         }
     }
 
-
+    public GuiScreen HandleGUI(int inventoryType)
+	{
+		return null;
+		//if(inventoryType == guiID)
+			//return new Gui_____(args);
+		//else return null;
+	}
 
  
 
