@@ -33,12 +33,7 @@ public class EntityLightningKnife extends Entity
     {
     }
 
-    public boolean isInRangeToRenderDist(double d)
-    {
-        double d1 = boundingBox.getAverageEdgeLength() * 4D;
-        d1 *= 64D;
-        return d < d1 * d1;
-    }
+  
 
     public EntityLightningKnife(World world, EntityLiving entityliving)
     {
@@ -159,7 +154,7 @@ public class EntityLightningKnife extends Entity
         {
             vec3d1 = Vec3D.createVector(movingobjectposition.hitVec.xCoord, movingobjectposition.hitVec.yCoord, movingobjectposition.hitVec.zCoord);
         }
-        if(!worldObj.multiplayerWorld)
+        if(!worldObj.singleplayerWorld)
         {
             Entity entity = null;
             List list = worldObj.getEntitiesWithinAABBExcludingEntity(this, boundingBox.addCoord(motionX, motionY, motionZ).expand(1.0D, 1.0D, 1.0D));
@@ -173,7 +168,7 @@ public class EntityLightningKnife extends Entity
                 }
                 float f4 = 0.3F;
                 AxisAlignedBB axisalignedbb = entity1.boundingBox.expand(f4, f4, f4);
-                MovingObjectPosition movingobjectposition1 = axisalignedbb.func_1169_a(vec3d, vec3d1);
+                MovingObjectPosition movingobjectposition1 = axisalignedbb.func_706_a(vec3d, vec3d1);
                 if(movingobjectposition1 == null)
                 {
                     continue;

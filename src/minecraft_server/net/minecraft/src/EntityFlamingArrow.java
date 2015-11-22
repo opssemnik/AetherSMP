@@ -133,7 +133,7 @@ public class EntityFlamingArrow extends Entity
         {
             Block.blocksList[i].setBlockBoundsBasedOnState(worldObj, xTile, yTile, zTile);
             AxisAlignedBB axisalignedbb = Block.blocksList[i].getCollisionBoundingBoxFromPool(worldObj, xTile, yTile, zTile);
-            if(axisalignedbb != null && axisalignedbb.isVecInside(Vec3D.createVector(posX, posY, posZ)))
+            if(axisalignedbb != null && axisalignedbb.isVecInXYZ(Vec3D.createVector(posX, posY, posZ)))
             {
                 inGround = true;
             }
@@ -167,7 +167,7 @@ public class EntityFlamingArrow extends Entity
         ticksInAir++;
         Vec3D vec3d = Vec3D.createVector(posX, posY, posZ);
         Vec3D vec3d1 = Vec3D.createVector(posX + motionX, posY + motionY, posZ + motionZ);
-        MovingObjectPosition movingobjectposition = worldObj.func_28105_a(vec3d, vec3d1, false, true);
+        MovingObjectPosition movingobjectposition = worldObj.func_28099_a(vec3d, vec3d1, false, true);
         vec3d = Vec3D.createVector(posX, posY, posZ);
         vec3d1 = Vec3D.createVector(posX + motionX, posY + motionY, posZ + motionZ);
         if(movingobjectposition != null)
@@ -186,7 +186,7 @@ public class EntityFlamingArrow extends Entity
             }
             float f4 = 0.3F;
             AxisAlignedBB axisalignedbb1 = entity1.boundingBox.expand(f4, f4, f4);
-            MovingObjectPosition movingobjectposition1 = axisalignedbb1.func_1169_a(vec3d, vec3d1);
+            MovingObjectPosition movingobjectposition1 = axisalignedbb1.func_706_a(vec3d, vec3d1);
             if(movingobjectposition1 == null)
             {
                 continue;
@@ -304,7 +304,7 @@ public class EntityFlamingArrow extends Entity
 
     public void onCollideWithPlayer(EntityPlayer entityplayer)
     {
-        if(worldObj.multiplayerWorld)
+        if(!worldObj.singleplayerWorld)
         {
             return;
         }
