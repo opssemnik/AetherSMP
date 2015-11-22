@@ -233,7 +233,7 @@ public class AetherGenDungeonSilver extends AetherGenBuildings
                             for(int j10 = 0; j10 < 3 + random.nextInt(3); j10++)
                             {
                                 ItemStack itemstack1 = getNormalLoot(random);
-                                tileentitychest1.setInventorySlotContents(random.nextInt(tileentitychest1.getSizeInventory()), itemstack1);
+                               // tileentitychest1.setInventorySlotContents(random.nextInt(tileentitychest1.getSizeInventory()), itemstack1);
                             }
 
                             break;
