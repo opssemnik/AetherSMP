@@ -26,25 +26,24 @@ public class AetherMobs
 {
 
     public AetherMobs()
-    {
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityAerwhale.class, "Aerwhale", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityCockatrice.class, "Cockatrice", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntitySwet.class, "Swets", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityZephyr.class, "Zephyr", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntitySheepuff.class, "Sheepuff", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityPhyg.class, "FlyingPig", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityAechorPlant.class, "AechorPlant", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntitySentry.class, "Sentry", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntitySlider.class, "Slider", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityValkyrie.class, "Valkyrie", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityHomeShot.class, "HomeShot", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityFireMonster.class, "Fire Monster", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityFireMinion.class, "Fire Minion", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityFiroBall.class, "Firo Ball", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityMoa.class, "MoaBase", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityFlyingCow.class, "FlyingCow", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityAerbunny.class, "Aerbunny", ModLoader.getUniqueEntityId());
-        ModLoader.RegisterEntityID(net.minecraft.src.Whirly.class, "Whirlwind", ModLoader.getUniqueEntityId());
+    {   ModLoader.RegisterEntityID(net.minecraft.src.EntityAerwhale.class, "Aerwhale", 100);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityCockatrice.class, "Cockatrice", 121);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntitySwet.class, "Swets", 122);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityZephyr.class, "Zephyr", 123);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntitySheepuff.class, "Sheepuff", 124);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityPhyg.class, "FlyingPig", 125);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityAechorPlant.class, "AechorPlant",126);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntitySentry.class, "Sentry", 101);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntitySlider.class, "Slider",102);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityValkyrie.class, "Valkyrie",103);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityHomeShot.class, "HomeShot",104);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityFireMonster.class, "Fire Monster", 105);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityFireMinion.class, "Fire Minion", 106);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityFiroBall.class, "Firo Ball", 107);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityMoa.class, "MoaBase", 108);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityFlyingCow.class, "FlyingCow", 109);
+    ModLoader.RegisterEntityID(net.minecraft.src.EntityAerbunny.class, "Aerbunny", 110);
+    ModLoader.RegisterEntityID(net.minecraft.src.Whirly.class, "Whirlwind", 111);
     }
 
     
