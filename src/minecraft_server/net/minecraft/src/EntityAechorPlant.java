@@ -163,11 +163,11 @@ public class EntityAechorPlant extends EntityAetherAnimal
             double d3 = 0.10000000000000001D + Math.sqrt(d * d + d1 * d1 + 0.10000000000000001D) * 0.5D + (posY - target.posY) * 0.25D;
             d *= d2;
             d1 *= d2;
-            EntityPoisonNeedle entitypoisonneedle = new EntityPoisonNeedle(worldObj, this);
-            entitypoisonneedle.posY = posY + 0.5D;
-            worldObj.playSoundAtEntity(this, "aether.sound.other.dartshooter.shootDart", 2.0F, 1.0F / (rand.nextFloat() * 0.4F + 0.8F));
-            worldObj.entityJoinedWorld(entitypoisonneedle);
-            entitypoisonneedle.setArrowHeading(d, d3, d1, 0.285F + (float)d3 * 0.05F, 1.0F);
+         //   EntityPoisonNeedle entitypoisonneedle = new EntityPoisonNeedle(worldObj, this);
+         //   entitypoisonneedle.posY = posY + 0.5D;
+         //   worldObj.playSoundAtEntity(this, "aether.sound.other.dartshooter.shootDart", 2.0F, 1.0F / (rand.nextFloat() * 0.4F + 0.8F));
+          //  worldObj.entityJoinedWorld(entitypoisonneedle);
+          //  entitypoisonneedle.setArrowHeading(d, d3, d1, 0.285F + (float)d3 * 0.05F, 1.0F);
             return;
         }
     }

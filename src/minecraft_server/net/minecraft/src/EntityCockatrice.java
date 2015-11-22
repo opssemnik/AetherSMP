@@ -75,7 +75,7 @@ public class EntityCockatrice extends EntityMob
                 double d2 = (entity.posY + (double)entity.getEyeHeight()) - 0.20000000298023224D - entitypoisonneedle.posY;
                 float f1 = MathHelper.sqrt_double(d * d + d1 * d1) * 0.2F;
                 worldObj.playSoundAtEntity(this, "mob.aether.dartshoot", 1.0F, 1.0F / (rand.nextFloat() * 0.4F + 0.8F));
-                worldObj.entityJoinedWorld(entitypoisonneedle);
+             //   worldObj.entityJoinedWorld(entitypoisonneedle);
                 entitypoisonneedle.setArrowHeading(d, d2 + (double)f1, d1, 0.6F, 12F);
                 attackTime = 30;
             }

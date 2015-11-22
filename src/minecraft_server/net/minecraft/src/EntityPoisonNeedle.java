@@ -40,7 +40,7 @@ public class EntityPoisonNeedle extends EntityProjectileBase
     {
         return victim == null && super.handleWaterMovement();
     }
-
+/*
     public boolean onHitTarget(Entity entity)
     {
         if(!(entity instanceof EntityLiving) || !AetherPoison.canPoison(entity))
@@ -72,7 +72,7 @@ public class EntityPoisonNeedle extends EntityProjectileBase
         poisonTime = 500;
         return false;
     }
-
+*/
     public void setEntityDead()
     {
         victim = null;

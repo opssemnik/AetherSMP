@@ -10,9 +10,10 @@ import org.lwjgl.opengl.GL11;
 public class mod_Aether extends BaseModMp
 
 {
-
+ public static boolean flag = false;
     public mod_Aether()
     {
+    	
         cloudPara = false;
         rand = new Random();
         zLevel = -90F;
@@ -195,7 +196,7 @@ public class mod_Aether extends BaseModMp
             }
             if(getCurrentDimension() == 3)
             {
-                boolean flag = ModLoader.getMinecraftInstance().statFileWriter.hasAchievementUnlocked(AetherAchievements.enterAether);
+//ModLoader.getMinecraftInstance().statFileWriter.hasAchievementUnlocked(AetherAchievements.enterAether);
                 if(!flag)
                 {
                 	flag = true;

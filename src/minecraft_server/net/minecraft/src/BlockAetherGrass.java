@@ -69,7 +69,7 @@ public class BlockAetherGrass extends Block
     public void harvestBlock(World world, EntityPlayer entityplayer, int i, int j, int k, int l)
     {
         entityplayer.addStat(StatList.mineBlockStatArray[blockID], 1);
-        if(entityplayer.inventory.getStackInSlot(0).itemID == AetherItems.ShovelSkyroot.shiftedIndex)
+        if(entityplayer.inventory.getStackInSlot(0) != null && entityplayer.inventory.getStackInSlot(0).itemID == AetherItems.ShovelSkyroot.shiftedIndex)
         {
             dropBlockAsItem(world, i, j, k, l);
         }

@@ -18,7 +18,7 @@ public class AetherPoison
 
     public AetherPoison()
     {
-        ModLoader.RegisterEntityID(net.minecraft.src.EntityPoisonNeedle.class, "PoisonNeedle", ModLoader.getUniqueEntityId());
+   //     ModLoader.RegisterEntityID(net.minecraft.src.EntityPoisonNeedle.class, "PoisonNeedle", ModLoader.getUniqueEntityId());
         ModLoader.RegisterEntityID(net.minecraft.src.EntityDartPoison.class, "PoisonDart", ModLoader.getUniqueEntityId());
         ModLoader.RegisterEntityID(net.minecraft.src.EntityDartGolden.class, "GoldenDart", ModLoader.getUniqueEntityId());
         ModLoader.RegisterEntityID(net.minecraft.src.EntityDartEnchanted.class, "EnchantedDart", ModLoader.getUniqueEntityId());
