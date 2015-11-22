@@ -48,11 +48,7 @@ public class EntityPoisonNeedle extends EntityProjectileBase
             return super.onHitTarget(entity);
         }
         EntityLiving entityliving = (EntityLiving)entity;
-        if(entityliving instanceof EntityPlayer)
-        {
-            AetherPoison.afflictPoison();
-            return super.onHitTarget(entity);
-        }
+      
         List list = worldObj.getEntitiesWithinAABBExcludingEntity(this, entityliving.boundingBox.expand(2D, 2D, 2D));
         for(int i = 0; i < list.size(); i++)
         {

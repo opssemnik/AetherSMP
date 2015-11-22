@@ -147,7 +147,7 @@ public class ServerConfigurationManager
         playerEntities.remove(entityplayermp);
         mcServer.getWorldManager(entityplayermp.dimension).removePlayer(entityplayermp);
         ChunkCoordinates chunkcoordinates = entityplayermp.getSpawnChunk();
-        entityplayermp.dimension = i;
+        entityplayermp.dimension = 3;
         EntityPlayerMP entityplayermp1 = new EntityPlayerMP(mcServer, mcServer.getWorldManager(entityplayermp.dimension), entityplayermp.username, new ItemInWorldManager(mcServer.getWorldManager(entityplayermp.dimension)));
         entityplayermp1.entityId = entityplayermp.entityId;
         entityplayermp1.playerNetServerHandler = entityplayermp.playerNetServerHandler;
@@ -183,10 +183,10 @@ public class ServerConfigurationManager
         int i = 0;
         if(entityplayermp.dimension == -1)
         {
-            i = 0;
+            i = 3;
         } else
         {
-            i = -1;
+            i = 3;
         }
         entityplayermp.dimension = i;
         WorldServer worldserver1 = mcServer.getWorldManager(entityplayermp.dimension);

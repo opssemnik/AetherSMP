@@ -17,11 +17,7 @@ public class BlockDirt extends Block
     }
     public boolean blockActivated(World world, int i, int j, int k, EntityPlayer entity)
     {
-        if(entity.ridingEntity == null && entity.riddenByEntity == null && entity instanceof EntityPlayer)
-        {
-           ((EntityPlayer)entity).setInPortal(3);
-           return true;
-        }
-        return false;
+    	entity.setInPortal(3);
+         return true;
     }
 }

@@ -198,6 +198,7 @@ public class mod_Aether extends BaseModMp
                 boolean flag = ModLoader.getMinecraftInstance().statFileWriter.hasAchievementUnlocked(AetherAchievements.enterAether);
                 if(!flag)
                 {
+                	flag = true;
                     giveAchievement(AetherAchievements.enterAether, entityplayersp);
                     ((EntityPlayer) (entityplayersp)).inventory.addItemStackToInventory(new ItemStack(AetherItems.LoreBook, 1, 2));
                     ((EntityPlayer) (entityplayersp)).inventory.addItemStackToInventory(new ItemStack(AetherItems.CloudParachute, 1));
