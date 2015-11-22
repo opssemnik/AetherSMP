@@ -5,7 +5,6 @@
 package net.minecraft.src;
 
 import java.util.List;
-import net.minecraft.client.Minecraft;
 
 // Referenced classes of package net.minecraft.src:
 //            EntityProjectileBase, EntityLiving, AetherPoison, EntityPlayerSP, 
@@ -49,7 +48,7 @@ public class EntityPoisonNeedle extends EntityProjectileBase
             return super.onHitTarget(entity);
         }
         EntityLiving entityliving = (EntityLiving)entity;
-        if(entityliving instanceof EntityPlayerSP)
+        if(entityliving instanceof EntityPlayer)
         {
             AetherPoison.afflictPoison();
             return super.onHitTarget(entity);
@@ -108,10 +107,7 @@ public class EntityPoisonNeedle extends EntityProjectileBase
                 setEntityDead();
                 return;
             }
-            EntitySlimeFX entityslimefx = new EntitySlimeFX(worldObj, posX, posY, posZ, Item.slimeBall);
-            entityslimefx.renderDistanceWeight = 10D;
-            entityslimefx.particleTextureIndex = texfxindex;
-            AetherPoison.mc.effectRenderer.addEffect(entityslimefx);
+          
             isDead = false;
             inGround = false;
             posX = victim.posX;

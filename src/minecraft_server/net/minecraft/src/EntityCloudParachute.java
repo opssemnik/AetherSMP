@@ -4,8 +4,9 @@
 
 package net.minecraft.src;
 
-import java.util.*;
-import net.minecraft.client.Minecraft;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 // Referenced classes of package net.minecraft.src:
 //            Entity, World, EntityLiving, AxisAlignedBB, 
@@ -66,24 +67,14 @@ public class EntityCloudParachute extends Entity
             {
                 cloudMap.remove(entityUsing);
             }
-            for(int i = 0; i < 32; i++)
-            {
-                doCloudSmoke(worldObj, entityUsing);
-            }
-
+           
             worldObj.playSoundAtEntity(entityUsing, "cloud", 1.0F, 1.0F / (rand.nextFloat() * 0.1F + 0.95F));
         }
         entityUsing = null;
         isDead = true;
     }
 
-    public static void doCloudSmoke(World world, EntityLiving entityliving)
-    {
-        double d = (entityliving.posX + entityliving.rand.nextDouble() * 0.75D * 2D) - 0.75D;
-        double d1 = ((entityliving.boundingBox.minY - 0.5D) + entityliving.rand.nextDouble() * 0.75D * 2D) - 0.75D;
-        double d2 = (entityliving.posZ + entityliving.rand.nextDouble() * 0.75D * 2D) - 0.75D;
-        ModLoader.getMinecraftInstance().effectRenderer.addEffect(new EntityCloudSmokeFX(world, d, d1, d2, 0.0D, 0.0D, 0.0D, 2.5F, 1.0F, 1.0F, 1.0F));
-    }
+  
 
     public static boolean entityHasRoomForCloud(World world, EntityLiving entityliving)
     {
@@ -95,16 +86,6 @@ public class EntityCloudParachute extends Entity
     {
     }
 
-    public boolean isInRangeToRenderDist(double d)
-    {
-        if(entityUsing != null)
-        {
-            return entityUsing.isInRangeToRenderDist(d);
-        } else
-        {
-            return super.isInRangeToRenderDist(d);
-        }
-    }
 
     public boolean canBeCollidedWith()
     {
@@ -124,7 +105,7 @@ public class EntityCloudParachute extends Entity
         }
         if(entityUsing == null)
         {
-            if(worldObj.multiplayerWorld && !justServerSpawned)
+            if(worldObj.singleplayerWorld && !justServerSpawned)
             {
                 die();
                 return;
@@ -145,8 +126,7 @@ public class EntityCloudParachute extends Entity
             entityUsing.motionY = -0.25D;
         }
         entityUsing.fallDistance = 0.0F;
-        doCloudSmoke(worldObj, entityUsing);
-        moveToEntityUsing();
+         moveToEntityUsing();
     }
 
     private EntityLiving findUser()

@@ -65,7 +65,7 @@ public class EntityAetherLightning extends EntityLightningBolt
                 }
             }
 
-            worldObj.field_27172_i = 2;
+          //  worldObj.field_27172_i = 2;
         }
     }
 

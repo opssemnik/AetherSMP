@@ -96,7 +96,7 @@ public class BlockTreasureChest extends BlockContainer
         TileEntityChest tileentitychest = (TileEntityChest)world.getBlockTileEntity(i, j, k);
         if(l % 2 == 1)
         {
-            ModLoader.OpenGUI(entityplayer, new GuiTreasureChest(entityplayer.inventory, tileentitychest, l));
+           // ModLoader.OpenGUI(entityplayer, new GuiTreasureChest(entityplayer.inventory, tileentitychest, l));
             return true;
         }
         ItemStack itemstack = entityplayer.inventory.getCurrentItem();

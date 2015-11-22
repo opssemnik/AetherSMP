@@ -165,7 +165,7 @@ public abstract class EntityProjectileBase extends Entity
             }
             float f3 = hitBox;
             AxisAlignedBB axisalignedbb = entity2.boundingBox.expand(f3, f3, f3);
-            MovingObjectPosition movingobjectposition1 = axisalignedbb.func_1169_a(vec3d, vec3d1);
+            MovingObjectPosition movingobjectposition1 = axisalignedbb.func_706_a(vec3d, vec3d1);
             if(movingobjectposition1 == null)
             {
                 continue;
@@ -191,7 +191,7 @@ public abstract class EntityProjectileBase extends Entity
                 {
                     if((entity1 instanceof EntityLiving) && !(entity1 instanceof EntityPlayer))
                     {
-                        ((EntityLiving)entity1).field_9346_af = 0;
+                        ((EntityLiving)entity1).field_9133_bm = 0;
                     }
                     entity1.attackEntityFrom(shooter, dmg);
                     setEntityDead();
@@ -285,7 +285,7 @@ public abstract class EntityProjectileBase extends Entity
         {
             return;
         }
-        if(worldObj.multiplayerWorld)
+        if(worldObj.singleplayerWorld)
         {
             return;
         }

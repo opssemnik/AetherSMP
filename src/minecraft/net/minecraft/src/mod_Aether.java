@@ -42,8 +42,8 @@ public class mod_Aether extends BaseModMp
         ModLoader.RegisterKey(this, key_loreGain, false);
         ModLoader.AddLocalization("key.loreGain", "Gain Lore");
         ModLoader.SetInGameHook(this, true, false);
-        for(int i = 108; i <= (i+MAX_GUI);i++){
-        	ModLoaderMp.RegisterGUI(this, i);
+        for(int i = 0; i <= (i+MAX_GUI);i++){
+        	//ModLoaderMp.RegisterGUI(this, i);
         }
        
     }

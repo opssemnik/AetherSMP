@@ -41,9 +41,9 @@ public class EntitySheepuff extends EntityAetherAnimal
     public boolean interact(EntityPlayer entityplayer)
     {
         ItemStack itemstack = entityplayer.inventory.getCurrentItem();
-        if(itemstack != null && itemstack.itemID == Item.shears.shiftedIndex && !getSheared())
+        if(itemstack != null && itemstack.itemID == Item.field_31022_bc.shiftedIndex && !getSheared())
         {
-            if(!worldObj.multiplayerWorld)
+            if(!worldObj.singleplayerWorld)
             {
                 if(getPuffed())
                 {
@@ -75,7 +75,7 @@ public class EntitySheepuff extends EntityAetherAnimal
         }
         if(itemstack != null && itemstack.itemID == Item.dyePowder.shiftedIndex && !getSheared())
         {
-            int k = BlockCloth.func_21034_c(itemstack.getItemDamage());
+            int k = BlockCloth.func_21033_c(itemstack.getItemDamage());
             if(getFleeceColor() != k)
             {
                 if(getPuffed() && itemstack.stackSize >= 2)

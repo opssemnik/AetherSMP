@@ -33,13 +33,7 @@ public class EntityNotchWave extends Entity
     {
     }
 
-    public boolean isInRangeToRenderDist(double d)
-    {
-        double d1 = boundingBox.getAverageEdgeLength() * 4D;
-        d1 *= 64D;
-        return d < d1 * d1;
-    }
-
+   
     public EntityNotchWave(World world, EntityLiving entityliving)
     {
         super(world);
@@ -146,7 +140,7 @@ public class EntityNotchWave extends Entity
         {
             vec3d1 = Vec3D.createVector(movingobjectposition.hitVec.xCoord, movingobjectposition.hitVec.yCoord, movingobjectposition.hitVec.zCoord);
         }
-        if(!worldObj.multiplayerWorld)
+        if(!worldObj.singleplayerWorld)
         {
             Entity entity = null;
             List list = worldObj.getEntitiesWithinAABBExcludingEntity(this, boundingBox.addCoord(motionX, motionY, motionZ).expand(4D, 4D, 4D));
@@ -164,7 +158,7 @@ public class EntityNotchWave extends Entity
                     entity1.attackEntityFrom(thrower, 5);
                 }
                 AxisAlignedBB axisalignedbb = entity1.boundingBox.expand(f4, f4, f4);
-                MovingObjectPosition movingobjectposition1 = axisalignedbb.func_1169_a(vec3d, vec3d1);
+                MovingObjectPosition movingobjectposition1 = axisalignedbb.func_706_a(vec3d, vec3d1);
                 if(movingobjectposition1 == null)
                 {
                     continue;

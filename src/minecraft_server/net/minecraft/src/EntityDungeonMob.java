@@ -27,7 +27,7 @@ public class EntityDungeonMob extends EntityCreature
         float f = getEntityBrightness(1.0F);
         if(f > 0.5F)
         {
-            entityAge += 2;
+           // entityAge += 2;
         }
         super.onLivingUpdate();
     }
@@ -97,7 +97,7 @@ public class EntityDungeonMob extends EntityCreature
             return false;
         }
         int l = worldObj.getBlockLightValue(i, j, k);
-        if(worldObj.func_27160_B())
+        if(worldObj.func_27067_u())
         {
             int i1 = worldObj.skylightSubtracted;
             worldObj.skylightSubtracted = 10;
